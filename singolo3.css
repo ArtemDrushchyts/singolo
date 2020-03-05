@@ -167,3 +167,41 @@ fieldset {
     height: 11px;
     background: url('./assets/img/quote/phone.png') no-repeat;
 }
+
+.footer {
+    background-color: #2d303a;
+    height: 76px;
+    padding: 22px;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__container span {
+    color: #4b5064;
+    font-size: 12px;
+    margin-top: -1px;
+}
+
+.footer-list {
+    display: flex;
+}
+
+.footer-list__item {
+    list-style: none;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #626883;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+}
+
+.footer-list__item:hover {
+    background-color: #cf7f7b;
+}
