@@ -69,6 +69,9 @@
 .navbar__item a:hover {
     color: #F06C64;
 }
+.active {
+    color: #F06C64 !important; 
+}
 
 .slider {
     background-color: #F06C64;
