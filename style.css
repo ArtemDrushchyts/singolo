@@ -120,6 +120,16 @@
     left: 403px;
 }
 
+.iphone-group {
+    position: absolute;
+    top: 44px;
+    left: 226px;
+}
+
+.item2 {
+    background: #648BF0;
+}
+
 .services {
     background-color: #F2F2F2;
     height: 500px;
