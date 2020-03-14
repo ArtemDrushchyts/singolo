@@ -15,16 +15,21 @@ navbar.addEventListener('click', (e) => {
     target.classList.add('active');
 });
 
-let homeTop = document.querySelector('#home').offsetTop;
-let servicesTop = document.querySelector('#services').offsetTop;
-let portfolioTop = document.querySelector('#portfolio').offsetTop;
-let aboutTop = document.querySelector('#about').offsetTop;
-let contactTop = document.querySelector('#contact').offsetTop;
-console.log(homeTop, servicesTop, portfolioTop);
-
 window.onscroll = () => {
-    let fromTop = document.documentElement.scrollTop;
+    let servicesTop = document.querySelector('#services').offsetTop,
+        portfolioTop = document.querySelector('#portfolio').offsetTop,
+        aboutTop = document.querySelector('#about').offsetTop,
+        contactTop = document.querySelector('#contact').offsetTop,
+        header = document.querySelector('.header'),
+        fromTop = document.documentElement.scrollTop;
 
+    if(fromTop >= 100) {
+        console.log(fromTop);
+        header.style.height = '50px';
+    }
+    if(fromTop < 49){
+        header.style.height = '95px';
+    }
     if(fromTop < servicesTop) {
         clearActiveLink();
         document.querySelector('a[href="#home"]').classList.add('active');
