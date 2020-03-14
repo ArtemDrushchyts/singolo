@@ -1,16 +1,52 @@
 let navbar = document.getElementsByClassName('navbar')[0];
 let navbarItems = document.querySelectorAll('.navbar .navbar__item a');
 
+function clearActiveLink(e) {
+    navbarItems.forEach(item => {
+        item.classList.remove('active');
+    })
+}
+
 navbar.addEventListener('click', (e) => {
-    let target = e.target
+    let target = e.target;
     if(target.classList != 'active') {
-        navbarItems.forEach(item => {
-            item.classList.remove('active');
-        })
+        clearActiveLink();
     }
     target.classList.add('active');
 });
 
+let homeTop = document.querySelector('#home').offsetTop;
+let servicesTop = document.querySelector('#services').offsetTop;
+let portfolioTop = document.querySelector('#portfolio').offsetTop;
+let aboutTop = document.querySelector('#about').offsetTop;
+let contactTop = document.querySelector('#contact').offsetTop;
+console.log(homeTop, servicesTop, portfolioTop);
+
+window.onscroll = () => {
+    let fromTop = document.documentElement.scrollTop;
+
+    if(fromTop < servicesTop) {
+        clearActiveLink();
+        document.querySelector('a[href="#home"]').classList.add('active');
+    }
+    if(fromTop >= servicesTop) {
+        clearActiveLink();
+        document.querySelector('a[href="#services"]').classList.add('active');
+    }
+    if(fromTop >= portfolioTop) {
+        clearActiveLink();
+        document.querySelector('a[href="#portfolio"]').classList.add('active');
+    }
+    if(fromTop >= aboutTop) {
+        clearActiveLink();
+        document.querySelector('a[href="#about"]').classList.add('active');
+    }
+    if(fromTop >= contactTop) {
+        clearActiveLink();
+        document.querySelector('a[href="#contact"]').classList.add('active');
+    }
+
+};
 
 let slides = document.getElementsByClassName('slider__item'),
     prev = document.getElementsByClassName('array-left')[0],
