@@ -117,3 +117,24 @@ function shuffle(a) {
     return a;
 }
 
+let popup = document.getElementsByClassName('popup')[0],
+    buttonOk = document.getElementsByClassName('popup__btn')[0],
+    subject = document.getElementsByClassName('popup__subject')[0],
+    describe = document.getElementsByClassName('popup__describe')[0],
+    form = document.getElementsByClassName('quote-form')[0],
+    subjectText = document.getElementsByClassName('subject-text')[0],
+    textareaText = document.getElementsByClassName('textarea-text')[0];
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if(form.checkValidity()) {
+        subject.innerHTML = subjectText.value ? `Тема: ${subjectText.value}` : 'Без темы';
+        describe.innerHTML = textareaText.value ? `Описание: ${textareaText.value}` : 'Без описания';
+        popup.classList.remove('disable');
+    }
+    form.reset();
+});
+
+buttonOk.addEventListener('click', () => {
+    popup.classList.add('disable');
+});

@@ -205,11 +205,26 @@
                         <fieldset>
                             <input type="text" placeholder="Name (Required)" name="name" required>
                             <input type="email" placeholder="Email (Required)" name="email" required>
-                            <input type="text" placeholder="Subject" name="subject">
-                            <textarea name="describe" placeholder="Describe your project in detail..."></textarea>
+                            <input type="text" placeholder="Subject" name="subject" class="subject-text">
+                            <textarea name="describe" placeholder="Describe your project in detail..." class="textarea-text
+"></textarea>
                         </fieldset>
                         <button class="quote-form__button" type="submit">Send</button>
                     </form>
+                    <div class="popup disable">
+                        <div class="popup__content">
+                            <div class="popup__status">
+                                <h3>Письмо отправлено</h3>
+                            </div>
+                            <div class="popup__description">
+                                <p class="popup__subject"></p>
+                                <p class="popup__describe"></p>
+                            </div>
+                            <div class="popup__button">
+                                <button class="popup__btn">OK</button>
+                            </div>
+                        </div>
+                    </div>
                     <div class="contact-info">
                         <h3 class="contact-info__title">Contact Information</h3>
                         <p class="contact-info__description">
