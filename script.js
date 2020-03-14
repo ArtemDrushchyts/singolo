@@ -19,7 +19,6 @@ let slides = document.getElementsByClassName('slider__item'),
     slideIndex = 1;
 
 function showSlides(n) {
-    console.log(n);
     if(n%2 == 0) {
         slidBg.style.backgroundColor = '#648BF0';
         slidBg.style.borderBottom ='6px solid #4C79EE'
@@ -62,10 +61,59 @@ let home1 = document.getElementsByClassName('home1')[0],
     display2 = document.getElementsByClassName('display2')[0];
 
 home1.addEventListener('click', () => {
-    console.log('asd')
     display1.classList.toggle('disable');
 });
 
 home2.addEventListener('click', () => {
     display2.classList.toggle('disable');
 });
+
+let portfolio = document.getElementsByClassName('portfolio-switch')[0],
+    portfolioLink =document.querySelectorAll('.portfolio-switch__item'),
+    portfolioList = document.getElementsByClassName('portfolio-list')[0],
+    portfolioImg = document.getElementsByClassName('portfolio-img');
+
+portfolio.addEventListener('click', (event) => {
+    let target = event.target;
+
+    if(target.classList.contains('portfolio-switch__item')) {
+
+        for(let item of portfolioImg) {
+            item.classList.remove('border-img');
+        }
+
+        for(let item of portfolioLink) {
+            item.classList.remove('active-tab');
+        }
+
+        target.classList.add('active-tab');
+
+        let random = shuffle([1,2,3,4,5,6,7,8,9,10,11,12]);
+        for(let i = 0;  i < random.length; i++) {
+            portfolioImg[i].src = `./assets/img/portfolio/image${random[i]}.png`
+        }
+    }
+});
+
+portfolioList.addEventListener('click', (event) => {
+   let target = event.target;
+   if(target.classList.contains('portfolio-img')) {
+       for(let item of portfolioImg) {
+           item.classList.remove('border-img');
+       }
+       target.classList.toggle('border-img');
+   }
+
+});
+
+function shuffle(a) {
+    let j, x;
+    for (let i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+

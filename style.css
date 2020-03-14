@@ -70,7 +70,7 @@
     color: #F06C64;
 }
 .active {
-    color: #F06C64 !important; 
+    color: #F06C64 !important;
 }
 
 .slider {
@@ -291,7 +291,7 @@
     transition: color 0.6s;
 }
 
-.portfolio-switch__item.active {
+.portfolio-switch__item.active-tab {
     color: #DEDEDE;
     border: 1px solid #C5C5C5;
 }
@@ -304,13 +304,20 @@
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     overflow: hidden;
     max-height: 601px;
 }
 
 .portfolio-list img {
     margin-bottom: 20px;
+    margin-right: 15px;
+    width: 220px;
+    height: 187px;
+}
+
+.border-img {
+    border: 5px solid #F06C64;
 }
 
 .about-us {
