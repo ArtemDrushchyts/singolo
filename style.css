@@ -106,20 +106,6 @@
     right: 13px;
 }
 
-/*.iphone-vertical, .iphone-gorizontal {*/
-/*    position: absolute;*/
-/*}*/
-
-/*.iphone-vertical {*/
-/*    top: 51px;*/
-/*    left: 90px;*/
-/*}*/
-
-/*.iphone-gorizontal {*/
-/*    top: 172px;*/
-/*    left: 403px;*/
-/*}*/
-
 .phone1 {
     position: absolute;
     z-index: 1;

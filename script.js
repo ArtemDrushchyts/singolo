@@ -17,8 +17,7 @@ let slides = document.getElementsByClassName('slider__item'),
     next = document.getElementsByClassName('array-right')[0],
     slidBg = document.getElementsByClassName('slider')[0],
     slideIndex = 1;
-// '#F06C64'
-// '#648BF0'
+
 function showSlides(n) {
     console.log(n);
     if(n%2 == 0) {
@@ -55,4 +54,18 @@ prev.addEventListener('click', function(){
 
 next.addEventListener('click', function(){
     plusSlides(1);
+});
+
+let home1 = document.getElementsByClassName('home1')[0],
+    home2 = document.getElementsByClassName('home2')[0],
+    display1 = document.getElementsByClassName('display1')[0],
+    display2 = document.getElementsByClassName('display2')[0];
+
+home1.addEventListener('click', () => {
+    console.log('asd')
+    display1.classList.toggle('disable');
+});
+
+home2.addEventListener('click', () => {
+    display2.classList.toggle('disable');
 });
