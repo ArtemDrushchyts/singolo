@@ -106,18 +106,78 @@
     right: 13px;
 }
 
-.iphone-vertical, .iphone-gorizontal {
+/*.iphone-vertical, .iphone-gorizontal {*/
+/*    position: absolute;*/
+/*}*/
+
+/*.iphone-vertical {*/
+/*    top: 51px;*/
+/*    left: 90px;*/
+/*}*/
+
+/*.iphone-gorizontal {*/
+/*    top: 172px;*/
+/*    left: 403px;*/
+/*}*/
+
+.phone1 {
     position: absolute;
+    z-index: 1;
+    top: 53px;
+    left: 92px;
 }
 
-.iphone-vertical {
-    top: 51px;
-    left: 90px;
+.shadow1 {
+    position: absolute;
+    z-index: 0;
+    top: 53px;
+    left: 92px;
 }
 
-.iphone-gorizontal {
-    top: 172px;
-    left: 403px;
+.display1 {
+    position: absolute;
+    z-index: 2;
+    top: 118px;
+    left: 106px;
+}
+
+.home1 {
+    position: absolute;
+    z-index: 3;
+    top: 460px;
+    left: 178px;
+}
+
+.phone2 {
+    position: absolute;
+    z-index: 1;
+    top: 174px;
+    left: 405px;
+}
+
+.shadow2 {
+    position: absolute;
+    z-index: 0;
+    top: 174px;
+    left: 406px;
+}
+
+.display2 {
+    position: absolute;
+    z-index: 2;
+    top: 188px;
+    left: 465px;
+}
+
+.home2 {
+    position: absolute;
+    z-index: 3;
+    top: 260px;
+    left: 413px;
+}
+
+.disable {
+    display: none;
 }
 
 .iphone-group {
