@@ -46,7 +46,7 @@ window.onscroll = () => {
         clearActiveLink();
         document.querySelector('a[href="#about"]').classList.add('active');
     }
-    if(fromTop >= contactTop) {
+    if(fromTop >= contactTop-45) {
         clearActiveLink();
         document.querySelector('a[href="#contact"]').classList.add('active');
     }
@@ -98,8 +98,10 @@ next.addEventListener('click', function(){
 
 let home1 = document.getElementsByClassName('home1')[0],
     home2 = document.getElementsByClassName('home2')[0],
+    home3 = document.getElementsByClassName('iphone-group-home')[0],
     display1 = document.getElementsByClassName('display1')[0],
-    display2 = document.getElementsByClassName('display2')[0];
+    display2 = document.getElementsByClassName('display2')[0],
+    display3 = document.getElementsByClassName('iphone-group-display')[0];
 
 home1.addEventListener('click', () => {
     display1.classList.toggle('disable');
@@ -108,6 +110,10 @@ home1.addEventListener('click', () => {
 home2.addEventListener('click', () => {
     display2.classList.toggle('disable');
 });
+
+home3.addEventListener('click', () => {
+    display3.classList.toggle('disable');
+})
 
 let portfolio = document.getElementsByClassName('portfolio-switch')[0],
     portfolioLink =document.querySelectorAll('.portfolio-switch__item'),
