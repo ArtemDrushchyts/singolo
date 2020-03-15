@@ -179,6 +179,18 @@ html {
     left: 226px;
 }
 
+.iphone-group-display {
+    position: absolute;
+    top: 113px;
+    left: 371px;
+}
+
+.iphone-group-home {
+    position: absolute;
+    top: 477px;
+    left: 453px;
+}
+
 .item2 {
     background: #648BF0;
 }
@@ -206,6 +218,7 @@ html {
     text-align: justify;
     letter-spacing: -0.41px;
     color: #A8ACC0;
+    font-family: 'Lato-Light';
 }
 
 .services-block {
