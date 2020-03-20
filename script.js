@@ -24,7 +24,6 @@ window.onscroll = () => {
         fromTop = document.documentElement.scrollTop;
 
     if(fromTop >= 100) {
-        console.log(fromTop);
         header.style.height = '50px';
     }
     if(fromTop < 49){
@@ -53,48 +52,62 @@ window.onscroll = () => {
 
 };
 
-let slides = document.getElementsByClassName('slider__item'),
-    prev = document.getElementsByClassName('array-left')[0],
-    next = document.getElementsByClassName('array-right')[0],
+let slides = document.querySelectorAll('.slider__item'),
     slidBg = document.getElementsByClassName('slider')[0],
-    slideIndex = 1;
+    arrayLeft = document.querySelector('.array-left'),
+    arrayRight = document.querySelector('.array-right'),
+    currentItem = 0,
+    isEnabled = true;
 
-function showSlides(n) {
-    if(n%2 == 0) {
-        slidBg.style.backgroundColor = '#648BF0';
-        slidBg.style.borderBottom ='6px solid #4C79EE'
+function changeCurrentItem(n) {
+    currentItem = (n + slides.length) % slides.length;
+    if(currentItem != 0) {
+        slidBg.classList.add('background-slider');
     } else {
-        slidBg.style.backgroundColor = '#F06C64';
-        slidBg.style.borderBottom ='6px solid #EA676B'
+        slidBg.classList.remove('background-slider');
     }
-
-    if(n > slides.length) {
-        slideIndex = 1;
-    }
-    if(n < 1) {
-        slideIndex = slides.length;
-    }
-    for(let i = 0; i <slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = 'block';
-
-
 }
 
-showSlides(slideIndex);
-
-function plusSlides (n) {
-    showSlides(slideIndex +=n)
+function hideItem(direction) {
+    isEnabled = false;
+    slides[currentItem].classList.add(direction);
+    slides[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('active-slide', direction);
+    });
 }
 
-prev.addEventListener('click', function(){
-    plusSlides(-1);
+function showItem(direction) {
+    slides[currentItem].classList.add('next', direction);
+    slides[currentItem].addEventListener('animationend', function() {
+        this.classList.remove('next', direction);
+        this.classList.add('active-slide');
+        isEnabled = true;
+    });
+}
+
+function previousItem(n) {
+    hideItem('to-right');
+    changeCurrentItem(n-1);
+    showItem('from-left');
+}
+
+function nextItem(n) {
+    hideItem('to-left');
+    changeCurrentItem(n+1);
+    showItem('from-right');
+}
+
+arrayLeft.addEventListener('click', function () {
+    if(isEnabled) {
+        previousItem(currentItem);
+    }
+});
+arrayRight.addEventListener('click', function () {
+    if(isEnabled) {
+        nextItem(currentItem);
+    }
 });
 
-next.addEventListener('click', function(){
-    plusSlides(1);
-});
 
 let home1 = document.getElementsByClassName('home1')[0],
     home2 = document.getElementsByClassName('home2')[0],
@@ -113,7 +126,7 @@ home2.addEventListener('click', () => {
 
 home3.addEventListener('click', () => {
     display3.classList.toggle('disable');
-})
+});
 
 let portfolio = document.getElementsByClassName('portfolio-switch')[0],
     portfolioLink =document.querySelectorAll('.portfolio-switch__item'),
