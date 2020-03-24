@@ -740,3 +740,81 @@ fieldset {
 .footer-list__item:hover {
     background-color: #cf7f7b;
 }
+
+@media screen and (max-width: 1019px) {
+    .wrapper {
+        width: 100%;
+        max-width: none;
+        padding: 0 40px;
+        height: 100%;
+    }
+    .slider {
+        height: 58.9vw;
+    }
+    .slider .wrapper {
+        width: 100%;
+    }
+    .phone1 {
+        top: 5.23vw;
+        left: 5.1vw;
+        width: 21.2vw;
+    }
+    .shadow1 {
+        top: 5.2vw;
+        left: 5.2vw;
+        width: 23.7vw;
+    }
+    .display1 {
+        top: 11.6vw;
+        left: 6.5vw;
+        width: 18.4vw;
+    }
+    .home1 {
+        top: 45vw;
+        left: 14vw;
+        width: 4.2vw;
+    }
+    .phone2 {
+        top: 17.1vw;
+        left: 35.8vw;
+        width: 45vw;
+    }
+    .shadow2 {
+        top: 17.1vw;
+        left: 35.9vw;
+        width: 47.4vw;
+    }
+    .display2 {
+        top: 18.46vw;
+        left: 41.7vw;
+        width: 32.7vw;
+    }
+    .home2 {
+        top: 25.5vw;
+        left: 36.6vw;
+        width: 4.2vw;
+    }
+    .array-left {
+        top: 27.5vw;
+        left: 3vw;
+    }
+    .array-right {
+        top: 27.5vw;
+        right: 3vw;
+    }
+    .iphone-group {
+        top: 4.27vw;
+        left: 19.2vw;
+        width: 50.8vw;  
+    }
+    .iphone-group-display {
+        top: 11.1vw;
+        left: 33.51vw;
+        width: 19.72vw;
+    }
+    .iphone-group-home {
+        top: 46.8vw;
+        left: 41.5vw;
+        width: 4.4vw;
+    }
+}
