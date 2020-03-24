@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <div class="wrapper">
             <h1 class="logo">Singolo</h1>
             <nav class="header-navbar">
                 <ul class="navbar">
-                    <li class="navbar__item"><a href="#">home</a></li>
-                    <li class="navbar__item"><a href="#">services</a></li>
-                    <li class="navbar__item"><a href="#">portfolio</a></li>
-                    <li class="navbar__item"><a href="#">about</a></li>
-                    <li class="navbar__item"><a href="#">contact</a></li>
+                    <li class="navbar__item"><a href="#home" class="active">home</a></li>
+                    <li class="navbar__item"><a href="#services">services</a></li>
+                    <li class="navbar__item"><a href="#portfolio">portfolio</a></li>
+                    <li class="navbar__item"><a href="#about">about</a></li>
+                    <li class="navbar__item"><a href="#contact">contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -26,13 +26,28 @@
         <section class="slider">
             <div class="wrapper">
                 <button class="array-left"></button>
-                <img class="iphone-vertical" src="./assets/img/iPhoneVertical.svg" alt="iPhone Vertical">
-                <img class="iphone-gorizontal" src="./assets/img/iPhoneHorizontal.svg" alt="iPhone Horizontal">
+                <div class="slider-wrapper">
+                    <div class="slider__item active-slide">
+                        <img src="./assets/img/slider/Phone1.png" alt="phone1" class="phone1">
+                        <img src="./assets/img/slider/phone-vertical-shadow.png" alt="shadow" class="shadow1">
+                        <img src="./assets/img/slider/phone-vertical-display1.png" alt=display" class="display1">
+                        <img src="./assets/img/slider/Home1.png" alt="home" class="home1">
+                        <img src="./assets/img/slider/Phone2.png" alt="phone2" class="phone2">
+                        <img src="./assets/img/slider/phone-horizontal-shadow2.png" alt="shadow2" class="shadow2">
+                        <img src="./assets/img/slider/phone-horizontal-display2.png" alt="display2" class="display2">
+                        <img src="./assets/img/slider/Home2.png" alt="home" class="home2">
+                    </div>
+                    <div class="slider__item">
+                        <img class="iphone-group" src="./assets/img/slider/slide3.png" alt="phone-group">
+                        <img class="iphone-group-display" src="./assets/img/slider/phone-vertical-display3.png" alt="display">
+                        <img class="iphone-group-home" src="./assets/img/slider/Home3.png" alt="home3">
+                    </div>
+                </div>
                 <button class="array-right"></button>
             </div>
         </section>
 
-        <section class="services">
+        <section class="services" id="services">
             <div class="wrapper">
                 <h2 class="servives__title">Our Services</h2>
                 <p class="services__description">
@@ -104,34 +119,34 @@
             </div>
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="wrapper">
                 <h2 class="portfolio__title">Portfolio</h2>
                 <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
                 <ul class="portfolio-switch">
-                    <li class="portfolio-switch__item active">All</li>
+                    <li class="portfolio-switch__item active-tab">All</li>
                     <li class="portfolio-switch__item">Web Design</li>
                     <li class="portfolio-switch__item">Graphic Design</li>
                     <li class="portfolio-switch__item">Artwork</li>
                 </ul>
                 <div class="portfolio-list">
-                    <img src="./assets/img/portfolio/image1.png" alt="project1">
-                    <img src="./assets/img/portfolio/image2.png" alt="project2">
-                    <img src="./assets/img/portfolio/image3.png" alt="project3">
-                    <img src="./assets/img/portfolio/image4.png" alt="project4">
-                    <img src="./assets/img/portfolio/image5.png" alt="project5">
-                    <img src="./assets/img/portfolio/image6.png" alt="project6">
-                    <img src="./assets/img/portfolio/image7.png" alt="project7">
-                    <img src="./assets/img/portfolio/image8.png" alt="project8">
-                    <img src="./assets/img/portfolio/image9.png" alt="project9">
-                    <img src="./assets/img/portfolio/image10.png" alt="project10">
-                    <img src="./assets/img/portfolio/image11.png" alt="project11">
-                    <img src="./assets/img/portfolio/image12.png" alt="project12">
+                    <img src="./assets/img/portfolio/image1.png" alt="project1" class="portfolio-img">
+                    <img src="./assets/img/portfolio/image2.png" alt="project2" class="portfolio-img">
+                    <img src="./assets/img/portfolio/image3.png" alt="project3" class="portfolio-img">
+                    <img src="./assets/img/portfolio/image4.png" alt="project4" class="portfolio-img">
+                    <img src="./assets/img/portfolio/image5.png" alt="project5" class="portfolio-img">
+                    <img src="./assets/img/portfolio/image6.png" alt="project6" class="portfolio-img">
+                    <img src="./assets/img/portfolio/image7.png" alt="project7" class="portfolio-img">
+                    <img src="./assets/img/portfolio/image8.png" alt="project8" class="portfolio-img">
+                    <img src="./assets/img/portfolio/image9.png" alt="project9" class="portfolio-img">
+                    <img src="./assets/img/portfolio/image10.png" alt="project10" class="portfolio-img">
+                    <img src="./assets/img/portfolio/image11.png" alt="project11" class="portfolio-img">
+                    <img src="./assets/img/portfolio/image12.png" alt="project12" class="portfolio-img">
                 </div>
             </div>
         </section>
 
-        <section class="about-us">
+        <section class="about-us" id="about">
             <div class="wrapper">
                 <h2 class="about-us__title">About Us</h2>
                 <p class="about-us__description">
@@ -179,7 +194,7 @@
             </div>
         </section>
 
-        <section class="quote">
+        <section class="quote" id="contact">
             <div class="wrapper">
                 <h2 class="quote__title">Get a Quote</h2>
                 <p class="quote__description">
@@ -192,11 +207,26 @@
                         <fieldset>
                             <input type="text" placeholder="Name (Required)" name="name" required>
                             <input type="email" placeholder="Email (Required)" name="email" required>
-                            <input type="text" placeholder="Subject" name="subject">
-                            <textarea name="describe" placeholder="Describe your project in detail..."></textarea>
+                            <input type="text" placeholder="Subject" name="subject" class="subject-text">
+                            <textarea name="describe" placeholder="Describe your project in detail..." class="textarea-text
+"></textarea>
                         </fieldset>
                         <button class="quote-form__button" type="submit">Send</button>
                     </form>
+                    <div class="popup disable">
+                        <div class="popup__content">
+                            <div class="popup__status">
+                                <h3>Письмо отправлено</h3>
+                            </div>
+                            <div class="popup__description">
+                                <p class="popup__subject"></p>
+                                <p class="popup__describe"></p>
+                            </div>
+                            <div class="popup__button">
+                                <button class="popup__btn">OK</button>
+                            </div>
+                        </div>
+                    </div>
                     <div class="contact-info">
                         <h3 class="contact-info__title">Contact Information</h3>
                         <p class="contact-info__description">
@@ -228,5 +258,6 @@
             </div>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
