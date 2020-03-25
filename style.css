@@ -390,7 +390,6 @@ html {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    /*justify-content: space-between;*/
     overflow: hidden;
     max-height: 601px;
 }
@@ -756,18 +755,18 @@ fieldset {
     }
     .phone1 {
         top: 5.23vw;
-        left: 5.1vw;
+        left: 5.7vw;
         width: 21.2vw;
     }
     .shadow1 {
-        top: 5.2vw;
-        left: 5.2vw;
+        top: 4.9vw;
+        left: 5.6vw;
         width: 23.7vw;
     }
     .display1 {
         top: 11.6vw;
-        left: 6.5vw;
-        width: 18.4vw;
+        left: 7.1vw;
+        width: 18.45vw;
     }
     .home1 {
         top: 45vw;
@@ -775,28 +774,28 @@ fieldset {
         width: 4.2vw;
     }
     .phone2 {
-        top: 17.1vw;
-        left: 35.8vw;
+        top: 17.2vw;
+        left: 36.3vw;
         width: 45vw;
     }
     .shadow2 {
-        top: 17.1vw;
-        left: 35.9vw;
+        top: 17.3vw;
+        left: 36.4vw;
         width: 47.4vw;
     }
     .display2 {
         top: 18.46vw;
-        left: 41.7vw;
-        width: 32.7vw;
+        left: 41.9vw;
+        width: 33vw;
     }
     .home2 {
-        top: 25.5vw;
-        left: 36.6vw;
+        top: 25.8vw;
+        left: 37vw;
         width: 4.2vw;
     }
     .array-left {
-        top: 27.5vw;
-        left: 3vw;
+        top: 27.6vw;
+        left: 4.2vw;
     }
     .array-right {
         top: 27.5vw;
@@ -816,5 +815,68 @@ fieldset {
         top: 46.8vw;
         left: 41.5vw;
         width: 4.4vw;
+    }
+    .services {
+        height: 100%;
+    }
+    .services-block {
+        margin-top: 37px;
+        justify-content: space-around;
+        margin-bottom: 17px;
+    }
+    .services-block__item {
+        margin-bottom: 54px;
+        margin-right: 34px;
+    }
+    .servives__title {
+        padding-top: 48px;
+    }
+    .portfolio {
+        height: 100%;
+    }
+    .portfolio-list {
+        justify-content: center;
+        max-height: 100%;
+    }
+    .portfolio-list img {
+        width: 216px;
+        height: 184px;
+        margin: 9.5px;
+    }
+    .portfolio .wrapper {
+        padding: 58px 30px;
+    }
+    .portfolio__title, .portfolio__description, .portfolio-switch {
+        padding: 0 10px;
+    }
+    .portfolio__description {
+        letter-spacing: 0.45px;
+        line-height: 30px;
+        text-align: justify;
+        margin-top: 18px;
+    }
+    .portfolio-switch {
+        margin-top: -5px;
+    }
+    .about-us {
+        height: 100%;
+    }
+    .about-us__title {
+        padding-top: 52px;
+    }
+    .staff {
+        margin-top: 38px;
+    }
+    .staff__item {
+        width: 29.4vw;
+    }
+    .staff__img {
+        width: 28.7vw;
+        height: 28.5vw;
+    }
+
+
+    .contact-info {
+        display: none;
     }
 }
