@@ -922,8 +922,109 @@ fieldset {
     .footer {
         padding: 22px 0;
     }
+}
 
-    .contact-info {
-        /* display: none; */
+@media screen and (max-width: 767px) {
+    .wrapper {
+        padding: 0 30px;
     }
+    .hamburger {
+        display: inline-block;
+        position: absolute;
+        width: 25px;
+        left: 20px;
+    }
+    .hamburger__item {
+        display: inline-block;
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+        top: 1px;
+    }
+    .hamburger::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        display: inline-block;
+        border-radius: 5px;
+        top: 10px;
+    }
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        display: inline-block;
+        border-radius: 5px;
+        top: -8px;
+    }
+    .header-navbar{
+        display: none;
+    }
+    .header .wrapper {
+        justify-content: center;
+    }
+    .header {
+        height: 71px !important;
+    }
+    .logo {
+        font-size: 20px;
+        margin: 7px 0 0 12px;
+    }
+    .slider__item {
+        right: 10px;
+    }
+    .array-left {
+        top: 25.6vw;
+        left: 2.2vw;
+    }
+    .array-right {
+        top: 26.5vw;
+        right: 0vw;
+    }
+    .servives__title {
+        padding-top: 35px;
+        margin-left: 2px;
+    }
+    .services__description {
+        margin-left: 2px;
+        text-align: left;
+        letter-spacing: 0.08px;
+    }
+    .services-block__item {
+        margin-right: 0;
+        margin-bottom: 29px;
+        width: 312px;
+        max-width: inherit;
+    }
+    .services-block {
+        margin-top: 29px;
+        justify-content: center;
+        margin-bottom: -7px;
+    }
+    .service__description {
+        width: 220px;
+    }
+    .portfolio .wrapper {
+        padding: 43px 30px;
+    }
+    .portfolio__title, .portfolio-switch, .portfolio__description {
+        padding: 0;
+    }
+    .portfolio-switch__item {
+        margin-top: 20px;
+    }
+
+
+
+
+     .contact-info {
+         display: none;
+         margin-top: 2px;
+     }
 }
