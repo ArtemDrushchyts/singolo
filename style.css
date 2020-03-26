@@ -820,9 +820,9 @@ fieldset {
         height: 100%;
     }
     .services-block {
-        margin-top: 37px;
-        justify-content: space-around;
-        margin-bottom: 17px;
+        justify-content: space-between;
+        max-width: 745px;
+        margin: 37px auto 17px;
     }
     .services-block__item {
         margin-bottom: 54px;
@@ -860,6 +860,7 @@ fieldset {
     }
     .about-us {
         height: 100%;
+        padding-bottom: 69px;
     }
     .about-us__title {
         padding-top: 52px;
@@ -868,15 +869,61 @@ fieldset {
         margin-top: 38px;
     }
     .staff__item {
-        width: 29.4vw;
+        width: 28.4vw;
     }
     .staff__img {
         width: 28.7vw;
         height: 28.5vw;
     }
-
+    .staff__item h3 {
+        margin-top: 10px;
+    }
+    .staff__item p {
+        margin-top: 3px;
+    }
+    .staff-list {
+        margin-top: 13px;
+    }
+    .quote {
+        height: 100%;
+    }
+    .quote__title {
+        padding-top: 62px;
+        margin-left: 2px;
+    }
+    .quote__description {
+        margin-left: 2px;
+    }
+    .quote-block {
+        margin-top: 21px;
+        margin-bottom: 6.3vw;
+    }
+    .quote-form {
+        margin-right: 30px;
+        margin-left: -1px;
+    }
+    .quote-form input {
+        width: 57.5vw;
+        margin-bottom: 12px;
+        padding: 8px 9px;
+    }
+    .quote-form textarea {
+        width: 57.5vw;
+        min-width: auto;
+        min-height: 20.65vw;
+        padding: 5px 10px;
+    }
+    .contact-info__description {
+        margin-top: 0;
+    }
+    .contact-info__location {
+        margin-top: 14px;
+    }
+    .footer {
+        padding: 22px 0;
+    }
 
     .contact-info {
-        display: none;
+        /* display: none; */
     }
 }
