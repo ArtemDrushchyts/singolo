@@ -1011,20 +1011,102 @@ fieldset {
         width: 220px;
     }
     .portfolio .wrapper {
-        padding: 43px 30px;
+        padding: 43px 23px 29px;
     }
     .portfolio__title, .portfolio-switch, .portfolio__description {
-        padding: 0;
+        padding: 0 7px;
     }
     .portfolio-switch__item {
         margin-top: 20px;
     }
+    .portfolio-list img {
+        width: 40.2vw;
+        height: 34.1vw;
+        margin: 7px 6.5px;
+    }
+    .portfolio-switch {
+        margin-top: -6px;
+    }
+    .portfolio-list img:nth-child(n+9) {
+        display: none;
+    }
 
+    .about-us__title {
+        padding-top: 33px;
+    }
+    .about-us__description {
+        text-align: inherit;
+        letter-spacing: 0.2px;
+    }
 
+    .staff__img {
+        width: 84vw;
+        height: 83.5vw;
+    }
+    .staff {
+        margin-top: 24px;
+    }
+    .staff__item {
+        width: 84vw;
+        margin-bottom: 35px;
+    }
+    .staff__item h3 {
+        margin-top: 16px;
+    }
+    .about-us {
+        padding-bottom: 4px;
+    }
 
+    .quote-block {
+        flex-wrap: wrap;
+        margin-top: 23px;
+    }
+    .quote__title {
+        padding-top: 53px;
+    }
+    .quote__title, .quote__description {
+        margin-left: 0;
+    }
+    .quote__description {
+        text-align: inherit;
+        letter-spacing: 0.2px;
+    }
+    .quote-form {
+        margin: 0;
+    }
+    .quote-form input {
+        width: 100%;
+        padding: 8px 6px;
+    }
+    .quote-form textarea {
+        width: 100%;
+        min-height: 42.4vw;
+        padding: 5px 7px;
+    }
+    .quote-form__button {
+        margin-top: 11px;
+        width: 100%;
+        height: 13.4vw;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
 
      .contact-info {
+         margin-top: 29px;
+     }
+     .contact-info__phone, .contact-info__email, .contact-info__location {
+         margin-bottom: 10px;
+     }
+     .quote {
+         padding-bottom: 5px;
+     }
+     .copyright {
          display: none;
-         margin-top: 2px;
+     }
+     .footer__container {
+         justify-content: center;
+     }
+     .footer-list__item:nth-child(1) {
+         margin: 0;
      }
 }
