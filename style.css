@@ -1110,3 +1110,13 @@ fieldset {
          margin: 0;
      }
 }
+
+@media screen and (max-width: 374px) {
+    .portfolio-switch__item {
+        font-size: 9px;
+    }
+    .portfolio-list img {
+        width: 38.2vw;
+        height: 32.1vw;
+    }
+}
