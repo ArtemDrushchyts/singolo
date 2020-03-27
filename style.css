@@ -26,6 +26,9 @@ html {
     z-index: 20;
     transition: height 0.4s;
 }
+#menu__toggle {
+    visibility: hidden;
+}
 
 .header .wrapper {
     display: flex;
@@ -54,6 +57,9 @@ html {
 
 .header-navbar {
     margin-top: 10px;
+}
+#menu__toggle, .hamburger, .menu__btn {
+    position: absolute;
 }
 
 .navbar__item {
@@ -933,7 +939,51 @@ fieldset {
         position: absolute;
         width: 25px;
         left: 20px;
+        z-index: 2;
     }
+    #menu__toggle {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+      
+    #menu__toggle:checked ~ .hamburger {
+        transform: rotate(90deg);
+        left: 23px;
+        top: 36px;
+    }
+    #menu__toggle:checked ~ .header-navbar {
+        display: block;
+        transition: width 0.5s;
+    }
+    #menu__toggle:checked ~ .logo {
+        margin-left: -45%;
+    }
+    .navbar {
+        flex-direction: column;
+        margin-top: 37.4vh;
+        margin-left: 22%;
+        font-size: 24px;
+    }
+    .navbar__item {
+        list-style: none;
+        margin-bottom: 28px;
+        letter-spacing: -1px;
+    }
+      
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 24px;
+        left: 19px;
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+        z-index: 5;
+    }
+      
     .hamburger__item {
         display: inline-block;
         position: absolute;
@@ -965,6 +1015,13 @@ fieldset {
     }
     .header-navbar{
         display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #2D303A;
+        width: 74%;
+        height: 100vh;
+        margin: 0;
     }
     .header .wrapper {
         justify-content: center;
@@ -975,6 +1032,8 @@ fieldset {
     .logo {
         font-size: 20px;
         margin: 7px 0 0 12px;
+        z-index: 2;
+        transition: margin 0.5s;
     }
     .slider__item {
         right: 10px;
