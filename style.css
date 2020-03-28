@@ -26,6 +26,9 @@ html {
     z-index: 20;
     transition: height 0.4s;
 }
+#menu__toggle {
+    visibility: hidden;
+}
 
 .header .wrapper {
     display: flex;
@@ -54,6 +57,9 @@ html {
 
 .header-navbar {
     margin-top: 10px;
+}
+#menu__toggle, .hamburger, .menu__btn {
+    position: absolute;
 }
 
 .navbar__item {
@@ -390,7 +396,6 @@ html {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    /*justify-content: space-between;*/
     overflow: hidden;
     max-height: 601px;
 }
@@ -739,4 +744,439 @@ fieldset {
 
 .footer-list__item:hover {
     background-color: #cf7f7b;
+}
+
+@media screen and (max-width: 1019px) {
+    .wrapper {
+        width: 100%;
+        max-width: none;
+        padding: 0 40px;
+        height: 100%;
+    }
+    .slider {
+        height: 58.9vw;
+    }
+    .slider .wrapper {
+        width: 100%;
+    }
+    .phone1 {
+        top: 5.23vw;
+        left: 5.7vw;
+        width: 21.2vw;
+    }
+    .shadow1 {
+        top: 4.9vw;
+        left: 5.6vw;
+        width: 23.7vw;
+    }
+    .display1 {
+        top: 11.6vw;
+        left: 7.1vw;
+        width: 18.45vw;
+    }
+    .home1 {
+        top: 45vw;
+        left: 14vw;
+        width: 4.2vw;
+    }
+    .phone2 {
+        top: 17.2vw;
+        left: 36.3vw;
+        width: 45vw;
+    }
+    .shadow2 {
+        top: 17.3vw;
+        left: 36.4vw;
+        width: 47.4vw;
+    }
+    .display2 {
+        top: 18.46vw;
+        left: 41.9vw;
+        width: 33vw;
+    }
+    .home2 {
+        top: 25.8vw;
+        left: 37vw;
+        width: 4.2vw;
+    }
+    .array-left {
+        top: 27.6vw;
+        left: 4.2vw;
+    }
+    .array-right {
+        top: 27.5vw;
+        right: 3vw;
+    }
+    .iphone-group {
+        top: 4.27vw;
+        left: 19.2vw;
+        width: 50.8vw;  
+    }
+    .iphone-group-display {
+        top: 11.1vw;
+        left: 33.51vw;
+        width: 19.72vw;
+    }
+    .iphone-group-home {
+        top: 46.8vw;
+        left: 41.5vw;
+        width: 4.4vw;
+    }
+    .services {
+        height: 100%;
+    }
+    .services-block {
+        justify-content: space-between;
+        max-width: 745px;
+        margin: 37px auto 17px;
+    }
+    .services-block__item {
+        margin-bottom: 54px;
+        margin-right: 34px;
+    }
+    .servives__title {
+        padding-top: 48px;
+    }
+    .portfolio {
+        height: 100%;
+    }
+    .portfolio-list {
+        justify-content: center;
+        max-height: 100%;
+    }
+    .portfolio-list img {
+        width: 216px;
+        height: 184px;
+        margin: 9.5px;
+    }
+    .portfolio .wrapper {
+        padding: 58px 30px;
+    }
+    .portfolio__title, .portfolio__description, .portfolio-switch {
+        padding: 0 10px;
+    }
+    .portfolio__description {
+        letter-spacing: 0.45px;
+        line-height: 30px;
+        text-align: justify;
+        margin-top: 18px;
+    }
+    .portfolio-switch {
+        margin-top: -5px;
+    }
+    .about-us {
+        height: 100%;
+        padding-bottom: 69px;
+    }
+    .about-us__title {
+        padding-top: 52px;
+    }
+    .staff {
+        margin-top: 38px;
+    }
+    .staff__item {
+        width: 28.4vw;
+    }
+    .staff__img {
+        width: 28.7vw;
+        height: 28.5vw;
+    }
+    .staff__item h3 {
+        margin-top: 10px;
+    }
+    .staff__item p {
+        margin-top: 3px;
+    }
+    .staff-list {
+        margin-top: 13px;
+    }
+    .quote {
+        height: 100%;
+    }
+    .quote__title {
+        padding-top: 62px;
+        margin-left: 2px;
+    }
+    .quote__description {
+        margin-left: 2px;
+    }
+    .quote-block {
+        margin-top: 21px;
+        margin-bottom: 6.3vw;
+    }
+    .quote-form {
+        margin-right: 30px;
+        margin-left: -1px;
+    }
+    .quote-form input {
+        width: 57.5vw;
+        margin-bottom: 12px;
+        padding: 8px 9px;
+    }
+    .quote-form textarea {
+        width: 57.5vw;
+        min-width: auto;
+        min-height: 20.65vw;
+        padding: 5px 10px;
+    }
+    .contact-info__description {
+        margin-top: 0;
+    }
+    .contact-info__location {
+        margin-top: 14px;
+    }
+    .footer {
+        padding: 22px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .wrapper {
+        padding: 0 30px;
+    }
+    .hamburger {
+        display: inline-block;
+        position: absolute;
+        width: 25px;
+        left: 20px;
+        z-index: 2;
+        transition: 0.2s ease-in-out;
+    }
+    #menu__toggle {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+      
+    #menu__toggle:checked ~ .hamburger {
+        transform: rotate(90deg);
+        left: 23px;
+        top: 36px;
+    }
+    #menu__toggle:checked ~ .header-navbar {
+        display: block;
+        left: 0;
+    }
+    #menu__toggle:checked ~ .logo {
+        margin-left: -45%;
+    }
+    .navbar {
+        flex-direction: column;
+        margin-top: 37.4vh;
+        margin-left: 22%;
+        font-size: 24px;
+    }
+    .navbar__item {
+        list-style: none;
+        margin-bottom: 28px;
+        letter-spacing: -1px;
+    }
+      
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 24px;
+        left: 19px;
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+        z-index: 5;
+    }
+      
+    .hamburger__item {
+        display: inline-block;
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+        top: 1px;
+    }
+    .hamburger::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        display: inline-block;
+        border-radius: 5px;
+        top: 10px;
+    }
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        display: inline-block;
+        border-radius: 5px;
+        top: -8px;
+    }
+    .header-navbar{
+        position: fixed;
+        left: -74%;
+        top: 0;
+        background-color: #2D303A;
+        width: 74%;
+        height: 100vh;
+        margin: 0;
+        transition: 0.5s;
+    }
+    .header .wrapper {
+        justify-content: center;
+    }
+    .header {
+        height: 71px !important;
+    }
+    .logo {
+        font-size: 20px;
+        margin: 7px 0 0 12px;
+        z-index: 2;
+        transition: margin 0.5s;
+    }
+    .slider__item {
+        right: 10px;
+    }
+    .array-left {
+        top: 25.6vw;
+        left: 2.2vw;
+    }
+    .array-right {
+        top: 26.5vw;
+        right: 0vw;
+    }
+    .servives__title {
+        padding-top: 35px;
+        margin-left: 2px;
+    }
+    .services__description {
+        margin-left: 2px;
+        text-align: left;
+        letter-spacing: 0.08px;
+    }
+    .services-block__item {
+        margin-right: 0;
+        margin-bottom: 29px;
+        width: 312px;
+        max-width: inherit;
+    }
+    .services-block {
+        margin-top: 29px;
+        justify-content: center;
+        margin-bottom: -7px;
+    }
+    .service__description {
+        width: 220px;
+    }
+    .portfolio .wrapper {
+        padding: 43px 23px 29px;
+    }
+    .portfolio__title, .portfolio-switch, .portfolio__description {
+        padding: 0 7px;
+    }
+    .portfolio-switch__item {
+        margin-top: 20px;
+    }
+    .portfolio-list img {
+        width: 40.2vw;
+        height: 34.1vw;
+        margin: 7px 6.5px;
+    }
+    .portfolio-switch {
+        margin-top: -6px;
+    }
+    .portfolio-list img:nth-child(n+9) {
+        display: none;
+    }
+
+    .about-us__title {
+        padding-top: 33px;
+    }
+    .about-us__description {
+        text-align: inherit;
+        letter-spacing: 0.2px;
+    }
+
+    .staff__img {
+        width: 84vw;
+        height: 83.5vw;
+    }
+    .staff {
+        margin-top: 24px;
+    }
+    .staff__item {
+        width: 84vw;
+        margin-bottom: 35px;
+    }
+    .staff__item h3 {
+        margin-top: 16px;
+    }
+    .about-us {
+        padding-bottom: 4px;
+    }
+
+    .quote-block {
+        flex-wrap: wrap;
+        margin-top: 23px;
+    }
+    .quote__title {
+        padding-top: 53px;
+    }
+    .quote__title, .quote__description {
+        margin-left: 0;
+    }
+    .quote__description {
+        text-align: inherit;
+        letter-spacing: 0.2px;
+    }
+    .quote-form {
+        margin: 0;
+    }
+    .quote-form input {
+        width: 100%;
+        padding: 8px 6px;
+    }
+    .quote-form textarea {
+        width: 100%;
+        min-height: 42.4vw;
+        padding: 5px 7px;
+    }
+    .quote-form__button {
+        margin-top: 11px;
+        width: 100%;
+        height: 13.4vw;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+     .contact-info {
+         margin-top: 29px;
+     }
+     .contact-info__phone, .contact-info__email, .contact-info__location {
+         margin-bottom: 10px;
+     }
+     .quote {
+         padding-bottom: 5px;
+     }
+     .copyright {
+         display: none;
+     }
+     .footer__container {
+         justify-content: center;
+     }
+     .footer-list__item:nth-child(1) {
+         margin: 0;
+     }
+}
+
+@media screen and (max-width: 374px) {
+    .portfolio-switch__item {
+        font-size: 9px;
+    }
+    .portfolio-list img {
+        width: 38.2vw;
+        height: 32.1vw;
+    }
 }
